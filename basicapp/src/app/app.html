@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="card">
+    <h2>🎓Student Details</h2>
+
+    <div class="row-box"><strong>Student Name: </strong> {{studentName}}</div>
+    <div class="row-box"><strong>Location: </strong> {{location}}</div>
+    <div class="row-box"><strong>College:</strong> {{college}}</div>
+    <div class="row-box">
+      <strong>Status:</strong>
+      <span [ngClass]="Attendance ? 'present' : 'absent'">
+        {{ Attendance ? 'Present ✅' : 'Absent ❌' }}
+      </span>
+    </div>
+    <div class="row-box"><strong>Batch Number:</strong> {{batchno}}</div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+/* Wrapper to center everything */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb, #2196f3);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Main card */
+.card {
+  background: #ffffffee;
+  padding: 5rem 5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #714586;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Row box style */
+.row-box {
+  border: 2px solid #a18cd1;   /* Vibrant border */
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  background: #fafafa;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between; /* keeps label left & value right if needed */
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.row-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Paragraph styling */
+.card p {
+  margin: 0.8rem 0;
+  font-size: 1.3rem;
+  color: #333;
+    line-height: 1.5;
+    
+}
+
+/* Status colors */
+.present {
+  color: #0f9d58;
+  font-weight: bold;
+}
+
+.absent {
+  color: #d93025;
+  font-weight: bold;
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Each info row as its own box */
+.detail-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.9rem;
+  border-radius: 12px;
+  background: #ffffff;
+  font-weight: 600;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+/* Info box styling */
+.info-box {
+  border: 2px solid #714586;   /* vibrant border */
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  background: #df839c;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for interaction */
+.info-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
